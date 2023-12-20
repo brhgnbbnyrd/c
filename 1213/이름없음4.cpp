@@ -1,16 +1,18 @@
 #include<stdio.h>
 
 
-int main()
-{
-	char ch;
+int main(){
+	int a;     double b;     char c;
+	int *pa;   double *pb;    char *pc;
 	
 	
 	
-	printf("문자를 입력하세요.");
-	ch = getchar();
-	putchar(ch);
-	printf("%c %d\n", ch, ch);
-	return 0;
+	a = 153; b = 12.7;   c = 'J';
+	pa = &a; pb = &b, pc = &c;
+	printf("pa = %x pb = %x pc = %x\n", pa, pb, pc);
+	printf("a = %p &b = %p &c = %p\n", &a, &b, &c);
 	
+	
+	printf("a = %d b = %1f c = %c\n", a, b, c);
+	printf("*pa = %d *pb = %1f *pc = %c\n", *pa, *pb, *pc);
 }

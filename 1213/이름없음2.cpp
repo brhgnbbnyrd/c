@@ -1,17 +1,17 @@
 #include<stdio.h>
 
 
-int main()
-{
-	char ch1, ch2;
-	
-	ch1 = 'A';
-	ch2 = 'a';
-	printf("%c %c\n", ch1, ch2);
-	printf("%d %d\n", ch1, ch2);
+int main(){
+
+	int a;
+	double b;
+	char c;
 	
 	
-	printf("%c %c\n", 66, 98);
-	printf("%d %d\n", 66, 98);
+	a = 153; b = 12.7; c = 'J';
+	printf("변수 a의 주소 : %d\n",&a);
+	printf("변수 b의 주소 : %d\n",&b);
+	printf("변수 c의 주소 : %d\n",&c);
+	
 	return 0;
 }

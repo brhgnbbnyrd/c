@@ -1,15 +1,17 @@
 #include<stdio.h>
 
+
 int main()
 {
-	int num [ ] = {5, 2, 6, 7, 8, 9, 4, 3, 1};
-	int page[10]= {123, 57, 67, 86};
-	int i, j;
-	for(int k=0; k<10;k++){
-		printf("%3d",num[k]); 
-	}
-		printf("\n");
-		for(int k=0; k<9;k++){
-		printf("%3d",page[k]); 
-	}
+	int x; // 정수형 변수 X 선언 
+	int* ptr; // 포인터 변수 ptr 선언 
+	
+	
+	x = 10;
+	ptr = &x;//변수 ptr에 x의 주소값 저장 
+	
+	printf("%d\n",x);
+	printf("%d",*ptr);
+	
+	return 0;
 }

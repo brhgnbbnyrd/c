@@ -1,12 +1,19 @@
 #include<stdio.h>
+int add(int* num1, int* num2){
 
-int main()
-{
-	char str1[ ] = {'H', 'i', ' ','C','3','o','d','i','n','g' };
-	char str2[ ] = {'H','i',' ','C','3','o','d','i','n','g','\0'};
+
 	
-	printf("%s\n", str1);
-	printf("%s\n", str2);
+	*num1 = *num1 + 10;
+	*num2 = *num2 + 10;
+		 	
+}
+int main(){
+	int number1 = 5;
+	int number2 = 10;
 	
-	return 0;
+	
+	add(&number1, &number2);
+	
+	printf("number1 = %d\n",number1);
+	printf("number2 = %d\n",number2);
 }

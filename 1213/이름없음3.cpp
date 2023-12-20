@@ -1,13 +1,12 @@
 #include<stdio.h>
-
-int main()
-{
-	char ch1, ch2;
-	
-	ch1 = 'A';
-	ch2 = 'a';
+int main(){
+	char ch = 'A';
 	
 	
-	printf("%c %c", ch1 + 32, ch2 - 32);
+	char* pch;
+	pch = &ch;
 	
+	
+	printf("%p\n", pch);	
+	printf("%c\n", *pch);
 }
