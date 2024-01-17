@@ -1,26 +1,25 @@
 #include<stdio.h>
-#include<string.h>
-
-
-	struct Person {
-	char name[10];
-	int age;
-	double height;
-};
-
+#include<stdlib.h>
 int main()
-{
-	struct Person m1;
-	struct Person m2 = {"허난설헌", 13, 159.9};
-	struct Person m3;
-	scanf("%s %d %lf", &m3.name, &m3.age, &m3.height);
+{	
+	FILE *out = fopen("StringFile.txt", "w");
+	char str1[] = "Hello C3Coding";
+	char str2[] = "안녕하세요 씨큐브코딩입니다.\n"; 
 	
-	strcpy(m1.name, "허균");
-	m1.age = 19;
-	m1.height = 169.34;
-	printf("%s, %d, %.2f\n", m1.name, m1.age, m1.height);
-	printf("%s, %d, %.2f\n", m2.name, m2.age, m2.height);
-	printf("%s %d %lf", m3.name, m3.age, m3.height);
+	if(out == NULL)
+	{
+		printf("파일이 없습니다.");
+		exit(1);
+	}
+	
+	fputs("문자열을 출력합니다.\n", out);
+	fputs(str1, out);
+	fputs("\n", out);
+	fputs(str2, out);
+	
+	
+	fclose(out);
+	
 	
 	return 0;
 }

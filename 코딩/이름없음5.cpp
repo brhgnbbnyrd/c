@@ -1,19 +1,18 @@
 #include<stdio.h>
-#include<string.h>
-struct Address{
-	char name[10];
-	char phon[20];
-	char home[50];
-};
-
-
-int main(){
-	struct Address m1;
-	struct Address m2;
-	strcpy(m1.name, "¿¡¿¨¿¨");
-	strcpy(m1.phon, "010-4944-0219");
-	strcpy(m1.home, "Earth");
-	printf("%s %s %s", m1.name, m1.phon, m1.home);
+int main()
+{	
+	int i, k, j, m;
+	scanf("%d %d %d", &k, &j, &m);
+	j = j+m;
+	if(j>=60)
+	{
+	k=k+(j/60);
+	j = j%60;
+	}
+	else if(k>=24);
+	{
+		k = k%24;
+	}
+	printf("%d %d", k, j);
 	return 0;
 }
-	

@@ -1,18 +1,30 @@
 #include<stdio.h>
-int main(){
-	int ar[] = {11, 21, 31, 41, 51, 61, 71};
-	int i, j, k;
-	j=0;
-	i = 0;
-	while(j = 1){
-	printf("%d\n",ar[i]);
-	if(ar[i]==71)
+#include<stdlib.h>
+int main()
+{	
+	FILE *in = fopen("StringFile.txt", "r");
+	char str1[30];
+	char str2[30];
+	char str3[30];
+	
+	
+	if(in == NULL)
 	{
-	break;
+		printf("파일이 없습니다.");
+		exit(1);
 	}
-	else
-	{
-	i++;
-	}
-}
+	
+	fgets(str1, sizeof(str1), in);
+	fgets(str2, sizeof(str2), in);
+	fgets(str3, sizeof(str3), in);
+	
+	
+	puts(str1);
+	printf("%s", str2);
+	
+	fputs(str3, stdout);
+	fclose(in);
+	
+	
+	return 0;
 }

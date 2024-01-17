@@ -1,23 +1,26 @@
 #include<stdio.h>
-struct Circle {
-	int x;
-	int y;
-	double r;
-};
-
+#include<stdlib.h>
 int main()
+{	
+	FILE *fp;
+	char ch;
+	
+	fp = fopen("CharOut.txt", "r");
+	
+	if(fp == NULL)
 	{
-	struct Circle c1, c3, c4;
-	c1.x =3;
-	c1.y =4;
-	c1.r =7;struct Circle c2 = {-5, -10, 3};
-	c4.x = c2.y;
-	c4.y = c2.x;
-	c4.r = c2.r;
-	printf("c1의 좌표(%d,%d,%.0f)\n", c1.x, c1.y, c1.r);
-	printf("c2의 좌표(%d,%d,%.0f)\n", c2.x, c2.y, c2.r);
-	printf("c2의 좌표(%d,%d,%.0f)\n", c4.x, c4.y, c4.r);
+		printf("파일이 없습니다.");
+		exit(1);
+	}
+	
+	ch = fgetc(fp);
+	printf("%c", ch);
+	ch = fgetc(fp);
+	putchar(ch);
+	
+	
+	fclose(fp);
+	
 	
 	return 0;
 }
-	
