@@ -1,26 +1,41 @@
 #include<stdio.h>
-#include<stdlib.h>
+
+
+void PrintFun1(int m, int n);
+void PrintFun2(int m, int n);
+
+
 int main()
-{	
-	FILE *fp;
-	char ch;
+{
+	int m, n;
 	
-	fp = fopen("CharOut.txt", "r");
-	
-	if(fp == NULL)
-	{
-		printf("파일이 없습니다.");
-		exit(1);
-	}
-	
-	ch = fgetc(fp);
-	printf("%c", ch);
-	ch = fgetc(fp);
-	putchar(ch);
+	m = 10;
+	n = 30;
 	
 	
-	fclose(fp);
+	
+	printf("main before : m = %d n = %d\n", m, n);
+	PrintFun1(m, n);
+	printf("main after : m = %d n = %d\n", m, n);
 	
 	
 	return 0;
 }
+
+void PrintFun1(int m, int n)
+{
+	printf("fin1 before : m = %d n = %d\n", m, n);
+	m = m+50;
+	n= n * 10;
+	PrintFun2(m, n);
+	printf("fin1 after : m = %d n = %d\n",m, n);
+}
+	
+	
+	void PrintFun2(int m, int n)
+	{
+		printf("fun2 before : m = %d n = %d\n", m, n);
+		m = m+50;
+		n = n*10;
+		printf("fun2 after : m = %d n = %d\n",m, n);
+	}

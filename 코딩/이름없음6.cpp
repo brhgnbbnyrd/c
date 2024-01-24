@@ -1,37 +1,43 @@
 #include<stdio.h>
 int main()
-{
-	int Ai[] = { };
-	int Bi[] = { };
-	int n,m,k;
-	m = 0;
-	scanf("%d", &n);
-	for(int i = 0; i<=n; i++)
-	{	
-		scanf("%d",&Ai[i]);
-		printf("답 \t%d/%d\n",m,n);
-		m++;
-	}
-	m = 1;
-	printf("학생 시작");
-	for(int i = 0; i<=n; i++)
-	{	
-		scanf("%d",&Bi[i]);
-		printf("답 \t%d/%d\n",m,n);
-		m++;
-	}
-	printf("답 확인\n");
-	m = 0;
-	for(int i = 0; i<=n; i++)
-	{	
-		if(Ai[i]==Bi[i])
+{	
+	int n,m;
+	int a[10]= { };
+	int b[10] = { };
+	n=0;
+	m=0;
+	printf("A가 가실 0~10까지의 수 10개를 써주세요");
+	for(int i = 0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+	}	
+	printf("b가 가실 0~10까지의 수 10개를 써주세요");
+	for(int i = 0;i<10;i++)
+	{
+		scanf("%d",&b[i]);
+	}	
+	
+	for(int i = 0;i<10;i++)
+	{
+		if(a[i]>b[i])
+		{
+			n++;
+		}
+		else if(a[i]<b[i])
 		{
 			m++;
 		}
-	}	
-	printf("학생 정답수 %d/%d", m, n);
-	
-	
-	
 	}
-
+	if(n>m)
+	{
+		printf("A");
+	}
+	else if(n<m)
+	{
+		printf("B");
+	}
+	else
+	{
+	printf("무승부");
+	}
+}

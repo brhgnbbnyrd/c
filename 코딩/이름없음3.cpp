@@ -1,25 +1,37 @@
 #include<stdio.h>
-#include<stdlib.h>
+int ga;
+int gb;
+
+void Sum();
+void Difference();
 int main()
-{	
-	FILE *out = fopen("StringFile.txt", "w");
-	char str1[] = "Hello C3Coding";
-	char str2[] = "안녕하세요 씨큐브코딩입니다.\n"; 
+{
+	printf("정수를 2개 입력하세요 : ");
+	scanf("%d %d", &ga, &gb);
+	Sum();
+	Difference();
+}
+
+
+void Sum()
+{
+	printf("%d + %d = %d\n", ga, gb, ga + gb);
+}
+
+void Difference()
+{
+	int diff;
 	
-	if(out == NULL)
+	
+	if(ga>gb)
 	{
-		printf("파일이 없습니다.");
-		exit(1);
+		diff = ga - gb;
+		printf("%d - %d = ", ga, gb);
 	}
-	
-	fputs("문자열을 출력합니다.\n", out);
-	fputs(str1, out);
-	fputs("\n", out);
-	fputs(str2, out);
-	
-	
-	fclose(out);
-	
-	
-	return 0;
+	else
+	{
+		diff = gb - ga;
+		printf("%d - %d = ", gb, ga);
+	}
+	printf("%d ", diff);
 }

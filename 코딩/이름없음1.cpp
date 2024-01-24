@@ -1,25 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
+//12,20
+//30,20,50
+//12, 20
 int main()
-{	
-	FILE *fp;
-	fp = fopen("CharOut.txt", "w");
+{
+	int a, b;
+	a =12;
+	b =20;
 	
-	if(fp == NULL)
+	printf("a = %d, b =%d\n", a, b);
 	{
-		printf("파일이 없습니다.");
-		exit(1);
+		int a,b,c;
+		a = 30;
+		c = 50;
+		printf("a = %d, b = %d, c = %d\n", a, b, c);
+		a =90;
+		b = 45;
+		c = 75;
 	}
 	
-	fputc('A', fp);
-	fputc('B', fp);
-	fputc('\n', fp);
-	fputc(97, fp);
-	fputc(98, fp);
 	
-	
-	fclose(fp);
-	
-	
-	return 0;
-}
+	printf("a = %d, b = %d\n", a, b);
+	}

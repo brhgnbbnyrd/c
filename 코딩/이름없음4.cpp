@@ -1,30 +1,29 @@
 #include<stdio.h>
-#include<stdlib.h>
+
+void Ccube();
+void Coding();
+
 int main()
-{	
-	FILE *in = fopen("StringFile.txt", "r");
-	char str1[30];
-	char str2[30];
-	char str3[30];
+{
+	Ccube();
+	Ccube();
+	Ccube();
+	Coding();
+	Coding();
+	Coding();
+}
+
+void Ccube()
+{
+	int cut = 0;
 	
+	cut++;
+	printf("%d 씨큐브\n", cut);
+}
+void Coding()
+{
+	static int cnt = 0;
 	
-	if(in == NULL)
-	{
-		printf("파일이 없습니다.");
-		exit(1);
-	}
-	
-	fgets(str1, sizeof(str1), in);
-	fgets(str2, sizeof(str2), in);
-	fgets(str3, sizeof(str3), in);
-	
-	
-	puts(str1);
-	printf("%s", str2);
-	
-	fputs(str3, stdout);
-	fclose(in);
-	
-	
-	return 0;
+	cnt++;
+	printf("%d 코딩\n", cnt);
 }
