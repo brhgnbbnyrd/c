@@ -1,41 +1,17 @@
 #include<stdio.h>
-
-
-void PrintFun1(int m, int n);
-void PrintFun2(int m, int n);
-
-
 int main()
 {
-	int m, n;
-	
-	m = 10;
-	n = 30;
+	int a, b, c;
 	
 	
-	
-	printf("main before : m = %d n = %d\n", m, n);
-	PrintFun1(m, n);
-	printf("main after : m = %d n = %d\n", m, n);
+	scanf("%d",&a);
+	printf("a = %d\n",a);
+	scanf("%d%D", &a, &b);
+	printf("a = %d  b = %d\n",a, b);
+	scanf("%d%d%d",&a,&b,&c);
+	printf("a = %d b = %d c = %d\n",a,b,c);
 	
 	
 	return 0;
-}
-
-void PrintFun1(int m, int n)
-{
-	printf("fin1 before : m = %d n = %d\n", m, n);
-	m = m+50;
-	n= n * 10;
-	PrintFun2(m, n);
-	printf("fin1 after : m = %d n = %d\n",m, n);
-}
 	
-	
-	void PrintFun2(int m, int n)
-	{
-		printf("fun2 before : m = %d n = %d\n", m, n);
-		m = m+50;
-		n = n*10;
-		printf("fun2 after : m = %d n = %d\n",m, n);
-	}
+}

@@ -1,29 +1,12 @@
-#include<stdio.h>
-
-void Ccube();
-void Coding();
+#include<Stdio.h>
 
 int main()
 {
-	Ccube();
-	Ccube();
-	Ccube();
-	Coding();
-	Coding();
-	Coding();
-}
-
-void Ccube()
-{
-	int cut = 0;
+	int a;
+	char b;
 	
-	cut++;
-	printf("%d ¾¾Å¥ºê\n", cut);
-}
-void Coding()
-{
-	static int cnt = 0;
-	
-	cnt++;
-	printf("%d ÄÚµù\n", cnt);
+	scanf("%d",&a);
+	getchar();
+	scanf("%c",&b);
+	printf("%d %c",a,b);
 }
