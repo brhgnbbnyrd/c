@@ -1,17 +1,26 @@
 #include<stdio.h>
+#include<conio.h>
+#include<windows.h>
+
 int main()
 {
-	int a, b, c;
+	int x,y;
+	COORD pos;
 	
 	
-	scanf("%d",&a);
-	printf("a = %d\n",a);
-	scanf("%d%D", &a, &b);
-	printf("a = %d  b = %d\n",a, b);
-	scanf("%d%d%d",&a,&b,&c);
-	printf("a = %d b = %d c = %d\n",a,b,c);
-	
-	
-	return 0;
+	do
+	{
+		pos.X = 0;
+		pos.Y = 0;
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
+		
+		
+		printf("커서 위치 입력 :");
+		scanf("%d %d",&pos.X, &pos.Y);
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
+		printf(".");
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
+	}while(pos.X <= 80 && pos.Y <= 24);
+	return 0; 
 	
 }

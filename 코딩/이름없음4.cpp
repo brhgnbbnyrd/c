@@ -1,12 +1,24 @@
-#include<Stdio.h>
+#include<stdio.h>
+#include<conio.h>
+#include<windows.h>
+#include<time.h>
+void GotoXY(int x, int y);
 
 int main()
 {
-	int a;
-	char b;
+	int i;
+	int j;
 	
-	scanf("%d",&a);
-	getchar();
-	scanf("%c",&b);
-	printf("%d %c",a,b);
+	do{
+		GotoXY(0, 0);
+		printf("%d", i);
+		Sleep(1000);
+		i++;
+	}while (1);
+	return 0;
+}
+void GotoXY(int x, int y)
+{
+	COORD pos = {x,y};
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
 }
