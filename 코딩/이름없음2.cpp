@@ -1,26 +1,19 @@
 #include<stdio.h>
-#include<conio.h>
-#include<windows.h>
-
 int main()
 {
-	int x,y;
-	COORD pos;
+	char str1[] = "C3coding";
+	char str2[10] = "C3coding";
 	
 	
-	do
-	{
-		pos.X = 0;
-		pos.Y = 0;
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
-		
-		
-		printf("커서 위치 입력 :");
-		scanf("%d %d",&pos.X, &pos.Y);
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
-		printf(".");
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
-	}while(pos.X <= 80 && pos.Y <= 24);
-	return 0; 
+	printf("%d\n", str1==str2);
+	printf("%d\n", str1 == "C3coding");
+	printf("%d\n", str2 == "C3coding");
+	printf("%d\n", "C3coding"== "C3coding");
+	printf("%d\n", str1 == "c3coding");
 	
+	
+	
+	
+	     
+	return 0;
 }

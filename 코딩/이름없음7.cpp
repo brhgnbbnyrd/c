@@ -1,30 +1,21 @@
 #include<stdio.h>
-#include<conio.h>
-#include<windows.h>
-#include<time.h>
-void GotoXY(int x, int y);
-void MyDelay(int d);
+#include <stdlib.h>
 
-int main()
-{
+int main(){
+	int ar[10] = {1,2,3,4,5,6,7,8,9,10,};
 	int i;
-	int s;
-	s=10;
-	i = 0;
-	while(i<=9)
+	int *pr;
+	pr = (int*)malloc(sizeof(int)*20);
+	
+	printf("%d %d %d\n", sizeof(ar), sizeof(ar[0]), sizeof(int));
+	
+	for(i = 0; i<sizeof(ar) / sizeof(ar[0]); i++)
 	{
-		GotoXY(40, i);
-		printf("%d", s);
-		i++;
-		s=s+10;
-		Sleep(1000);
-		 
-		
-	} 
+		printf("%d ", ar[i]);
+	}
+	for(i = 0; i<20; i++){
+		pr[i] = i+1;
+		printf("%d ", pr[i]);
+	}
 	return 0;
-}
-void GotoXY(int x, int y)
-{
-		COORD pos = {x,y};
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }

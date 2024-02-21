@@ -1,28 +1,31 @@
 #include<stdio.h>
-#include<conio.h>
-#include<windows.h>
-void GotoXY(int x, int y);
+#include <string.h>
 
 int main()
 {
-	COORD pos;
+	char *sp = "C3coding";
+	char str[] = "C3coding";
+	int res;
 	
-	do
-	{
-		pos.X = 30;
-		pos.Y = 24;
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
-		
-		
-		printf("ÁÂÇ¥ :");
-		scanf("%d%d", &pos.X, &pos.Y);
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
-		printf("%s", "¤Ç");
-		
-		pos.X = 30;
-		pos.Y = 24;
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
-		printf("                    ");
-		}while (1);
-		return 0;
+	res = strcmp(sp, str);
+	printf("%d\n", res);
+	res = strcmp(sp, "C3coding");
+	printf("%d\n", res);
+	res = strcmp("C3coding", "C3coding");
+	printf("%d\n", res);
+	
+	
+	res = strcmp("test", "text");
+	printf("%d\n", res);
+	res = strcmp("text", "test");
+	printf("%d\n", res);
+	
+	return 0;
+	
+	
+	
+	
+	
+	
+	
 }

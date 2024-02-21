@@ -1,24 +1,17 @@
 #include<stdio.h>
-#include<conio.h>
-#include<windows.h>
-#include<time.h>
-void GotoXY(int x, int y);
-
+#include <string.h>
 int main()
 {
-	int i;
-	int j;
+	char name1[10];
+	char name2[10];
 	
-	do{
-		GotoXY(0, 0);
-		printf("%d", i);
-		Sleep(1000);
-		i++;
-	}while (1);
+	strcpy(name1,"가");
+	strcpy(name2,"나");
+	
+	
+	printf("%d\n", strcmp(name1,name2));
+	printf("%d\n", strcmp("나", "가"));
+	
+	
 	return 0;
-}
-void GotoXY(int x, int y)
-{
-	COORD pos = {x,y};
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , pos);
 }

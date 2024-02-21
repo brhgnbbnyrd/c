@@ -1,26 +1,18 @@
 #include<stdio.h>
-#include<conio.h>
-#include<windows.h>
-#include<time.h>
-void GotoXY(int x, int y);
-void MyDelay(int d);
-
+#include <stdlib.h>
 int main()
 {
-	int i;
-	int s;
-	s=10;
-	for(i =20; i<=47; i+=3)
+	int *p;
+	p = (int *)malloc(sizeof(int)*5);
+	for(int i = 0; i < 5; i++);
 	{
-		GotoXY(20+i, 4);
-		printf("%d", s);
-		Sleep(1000);
-		s=s+10;
-	} 
-	return 0;
-}
-void GotoXY(int x, int y)
-{
-		COORD pos = {x,y};
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+		p[i] = i;
+		printf("%d", p[i]);
+	}
+	printf("\n");
+	for (int i = 0; i<5; i++)
+	{
+		printf("%d", *p +i);
+	}
+	free(p);
 }

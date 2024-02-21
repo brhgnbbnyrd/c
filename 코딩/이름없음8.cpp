@@ -1,11 +1,18 @@
 #include<stdio.h>
-#include<conio.h>
+#include <stdlib.h>
+
 int main()
 {
-	char ch;
+	double *d;
+	char *ch;
+	d = (double*)malloc(sizeof(double));
+	ch = (char*)malloc(sizeof(char));
 	
-	ch = _getche();
-	printf("\nch = %d : %c\n",ch,ch);
-	putchar(ch);
+	*d = 3.1415912;
+	*ch = 'A';
+	printf("%lf %c", *d, *ch);
+	
+	free(d);
+	free(ch);
+	return 0;
 }
- 
