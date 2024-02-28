@@ -1,16 +1,11 @@
 #include<stdio.h>
-#include<time.h>
-#include<string.h>
-#include<conio.h>
+
 int main()
 {
-	unsigned char ch;
-	
-	do{
-		ch = getch();
-		printf("%d %x : %c\n", ch, ch, ch);
-	}while(ch !=13);
-	
-	return 0;
+	int i, j;
+	i=6;
+	while(i>=1)
+	{	
+		
 	
 }
