@@ -1,18 +1,16 @@
 #include<stdio.h>
-#include <stdlib.h>
+
 int main()
-{
-	int *p;
-	p = (int *)malloc(sizeof(int)*5);
-	for(int i = 0; i < 5; i++);
-	{
-		p[i] = i;
-		printf("%d", p[i]);
+{	
+	int i;
+	for(int j=5;j>=1; j--)
+	{	
+		i=j;
+		while(i>=1)
+		{
+			printf("%3d",i);
+			i--;
+		}
+	printf("\n"); 
 	}
-	printf("\n");
-	for (int i = 0; i<5; i++)
-	{
-		printf("%d", *p +i);
-	}
-	free(p);
 }

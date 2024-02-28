@@ -1,17 +1,16 @@
 #include<stdio.h>
-#include <string.h>
+
 int main()
-{
-	char name1[10];
-	char name2[10];
-	
-	strcpy(name1,"가");
-	strcpy(name2,"나");
-	
-	
-	printf("%d\n", strcmp(name1,name2));
-	printf("%d\n", strcmp("나", "가"));
-	
-	
-	return 0;
+{	
+	int i;
+	for(int j=5;j>=1; j--)
+	{	
+		i=j;
+		while(i>=1)
+		{
+			printf("%3d",i);
+			i--;
+		}
+	printf("\n"); 
+	}
 }
